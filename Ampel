@@ -1,0 +1,35 @@
+int ampelRotPin = 12;
+int ampelGelbPin = 11;
+int ampelGruenPin = 10;
+
+void setup() {
+  pinMode(ampelRotPin, OUTPUT);
+  pinMode(ampelGelbPin, OUTPUT);
+  pinMode(ampelGruenPin, OUTPUT);
+}
+void loop() {
+  // gruen
+  digitalWrite(ampelRotPin, LOW);
+  digitalWrite(ampelGelbPin, LOW);
+  digitalWrite(ampelGruenPin, HIGH);
+
+  delay(5000);
+  // gelb
+  digitalWrite(ampelRotPin, LOW);
+  digitalWrite(ampelGelbPin, HIGH);
+  digitalWrite(ampelGruenPin, LOW);
+
+  delay(1000);
+  // rot
+  digitalWrite(ampelRotPin, HIGH);
+  digitalWrite(ampelGelbPin, LOW);
+  digitalWrite(ampelGruenPin, LOW);
+
+  delay(5000);
+  // rot-gelb
+  digitalWrite(ampelRotPin, HIGH);
+  digitalWrite(ampelGelbPin, HIGH);
+  digitalWrite(ampelGruenPin, LOW);
+
+  delay(1000);
+}
