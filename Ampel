@@ -1,35 +1,35 @@
-int ampelRotPin = 12;
-int ampelGelbPin = 11;
-int ampelGruenPin = 10;
+int RotPin = 3;
+int GelbPin = 4;
+int GruenPin = 5;
 
 void setup() {
-  pinMode(ampelRotPin, OUTPUT);
-  pinMode(ampelGelbPin, OUTPUT);
-  pinMode(ampelGruenPin, OUTPUT);
+  pinMode(RotPin, OUTPUT);
+  pinMode(lGelbPin, OUTPUT);
+  pinMode(GruenPin, OUTPUT);
 }
 void loop() {
   // gruen
-  digitalWrite(ampelRotPin, LOW);
-  digitalWrite(ampelGelbPin, LOW);
-  digitalWrite(ampelGruenPin, HIGH);
+  digitalWrite(RotPin, LOW);
+  digitalWrite(GelbPin, LOW);
+  digitalWrite(GruenPin, HIGH);
 
-  delay(5000);
+  delay(3000);
   // gelb
-  digitalWrite(ampelRotPin, LOW);
-  digitalWrite(ampelGelbPin, HIGH);
-  digitalWrite(ampelGruenPin, LOW);
+  digitalWrite(RotPin, LOW);
+  digitalWrite(GelbPin, HIGH);
+  digitalWrite(GruenPin, LOW);
 
   delay(1000);
   // rot
-  digitalWrite(ampelRotPin, HIGH);
-  digitalWrite(ampelGelbPin, LOW);
-  digitalWrite(ampelGruenPin, LOW);
+  digitalWrite(RotPin, HIGH);
+  digitalWrite(GelbPin, LOW);
+  digitalWrite(GruenPin, LOW);
 
-  delay(5000);
+  delay(3000);
   // rot-gelb
-  digitalWrite(ampelRotPin, HIGH);
-  digitalWrite(ampelGelbPin, HIGH);
-  digitalWrite(ampelGruenPin, LOW);
+  digitalWrite(RotPin, HIGH);
+  digitalWrite(GelbPin, HIGH);
+  digitalWrite(GruenPin, LOW);
 
   delay(1000);
 }
